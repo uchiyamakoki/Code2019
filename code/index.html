@@ -100,10 +100,10 @@
 				left: 42px;
 				color: #d5d5d6;
 			}
-			.nav-pannel{
+			.nav-bottom{
 				position: fixed;
 				bottom:0px;
-				height: 65px;
+				height: 70px;
 				width: 100%;
 				z-index: 9999;
 				background: #000;
@@ -155,6 +155,60 @@
 				right: 50px;
 				color: #d5d5d6;
 				font-size: 13px;
+			}
+			.nav-pannel-bk{
+				position: fixed;
+				bottom: 70px;
+				height: 135px;
+				width: 100%;
+				background: #000;
+				opacity: 0.9;
+				z-index: 10000;
+			}
+			.nav-pannel{
+				position: fixed;
+				bottom: 70px;
+				height: 135px;
+				width: 100%;
+				background: none;
+				color: #fff;
+				z-index: 10001;
+			}
+			.child-mod{
+				padding: 5px 10px;
+				margin: 15px;
+			}
+			.child-mod span{
+				display: inline-block;
+				padding-right:20px ;
+				padding-left: 10px;
+			}
+			.font-size-button{
+				background: none;
+				border: 1px #8c8c8c solid;
+				color: #fff;
+				border-radius:16px ;
+				padding: 5px 40px;
+			}
+			.child-mod button:nth-child(2){
+				margin-right: 10px;
+			}
+			.bk-container{
+				width: 30px;
+				height: 30px;
+				border-radius: 15px;
+				background: #fff;
+				display: inline-block;
+				vertical-align: -14px;
+			}
+			.bk-container-current{
+				width: 32px;
+				height: 32px;
+				border-radius: 16px;
+				border: 1px #ff7800 solid;
+				display: inline-block;
+				top:-2px;
+				left: -2px;
 			}
 		</style>
 	</head>
@@ -237,6 +291,9 @@
 					<li id="next_button">下一章</li>
 				</ul>
 			</div>
+			<div class="nav-pannel-bk">
+
+			</div>
 			<div id="font-container" class="nav-pannel">
 				<div class="child-mod">
 					<span>字号</span>
@@ -249,6 +306,8 @@
 						<div class="bk-container-current"></div>
 					</div>
 				</div>
+			</div>
+			<div id="bottom-container" class="nav-bottom">
 				<div class="icon-book"></div>
 				<div class="nav-book">目录</div>
 				<div class="icon-font"></div>
@@ -256,6 +315,7 @@
 				<div class="icon-time"></div>
 				<div class="nav-time">夜间</div>
 			</div>
+
 		</div>
 		<script src="lib/zepto.min.js"></script>
 		<script>
